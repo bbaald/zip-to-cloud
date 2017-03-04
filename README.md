@@ -12,7 +12,7 @@ const ztc = new zipToCloud({
 });
 
 /**
-* Note, files must be in the format
+* Note, each object must be in the format
 *  { 
 *    s3:  'path/to/file/on/s3', 
 *    zip: 'where/to/put/file/on/zip' 
@@ -25,8 +25,8 @@ ztc.addFiles([
     zip: 'path/to/myfile.png'
   },
   {
-      s3:  'myotherfile.png',
-      zip: 'different/path/to/myotherfile.png'
+    s3:  'myotherfile.png',
+    zip: 'different/path/to/myotherfile.png'
   }
 ])
   .then(() => {
@@ -37,3 +37,14 @@ ztc.addFiles([
 ## Installation
 
 `npm install zip-to-cloud`
+
+## API
+```javascript
+ztc.addFile(file)
+```
+```javascript
+ztc.addFiles(files)
+```
+```javascript
+ztc.zipAndUpload(to)
+```

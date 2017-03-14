@@ -17,6 +17,11 @@ const ztc = new zipToCloud({
 *    s3:  'path/to/file/on/s3', 
 *    zip: 'where/to/put/file/on/zip' 
 *  }
+*  If you want a custom file to be added,
+*  {
+*    file: 'This can be a String, ArrayBuffer, Uint8Array, Buffer, Blob, Promise or stream',
+*    zip: 'where/to/put/file/on/zip'
+*  }
 */
 
 ztc.addFiles([
@@ -27,6 +32,10 @@ ztc.addFiles([
   {
     s3:  'myotherfile.png',
     zip: 'different/path/to/myotherfile.png'
+  },
+  {
+    file: 'My final file',
+    zip: 'path/to/my/best/file.txt'
   }
 ])
   .then(() => {

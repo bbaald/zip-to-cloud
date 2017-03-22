@@ -3,10 +3,10 @@
 This is a library that will zip files from the cloud back to the cloud.
 
 ```javascript
-const zipToCloud = require('zip-to-cloud')
+const ZipToCloud = require('zip-to-cloud')
 const AWS = require('aws-sdk')
 
-const ztc = new zipToCloud({
+const ztc = new ZipToCloud({
   s3: new AWS.S3(),
   bucket: 'mybucket'
 });

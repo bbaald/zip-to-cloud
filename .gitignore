@@ -41,3 +41,6 @@ yarn.lock
 
 # IDE
 .idea
+
+# test
+test.js
